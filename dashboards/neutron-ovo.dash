@@ -1,0 +1,16 @@
+[dashboard]
+title = Neutron OVO
+description = Items related to OVO, including DB Relocation and Integration
+foreach = ((project:openstack/neutron) branch:master status:open NOT status:merged
+
+[section "My Object Patches"]
+query = (topic:bp/adopt-oslo-versioned-objects-for-db owner:self)
+
+[section "My DB Patches"]
+query = (topic:bug/1597913 owner:self)
+
+[section "Objects Need Review"]
+query = (topic:bp/adopt-oslo-versioned-objects-for-db NOT owner:self)
+
+[section "DB Need Review"]
+query = (topic:bug/1597913 NOT owner:self)
